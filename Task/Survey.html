@@ -1,0 +1,30 @@
+{{ block styles }}
+
+<link href="{% static 'css_back/custom.css' %}" rel="stylesheet">
+
+{{ endblock }}
+
+{{ block content }}
+
+<div class="card-header bg-transparent mainheader" ><h3 class="card-title font-weight-bold mt-3 mb-3"> Survey </h3></div>
+<br>
+
+
+<p>The activity is complete - thank you for your participation! Before you finish, it would be much appreciated if you answered the following three questions.</p>
+<br>
+<h5>Guess</h5>
+<p>Please write in the box below a short explanation of why you thought Proposer {{ player.proposer_id }} drew a {{ ball }} ball.</p>
+{{ formfield player.guess_rationale}}
+<br>
+<br>
+<h5>Fairness</h5>
+<p>Proposer {{ player.proposer_id }} offered you {{ offer_absolute}} and kept {{proposer_portion}} for themselves. Do you think this was fair? Please write a short explanation in the box below.</p>
+{{ formfield player.fairness_rationale}}
+<br>
+<p>All in all, do you think that Proposer {{ player.proposer_id }}'s offer was fair or unfair?</p>
+{{formfield player.fair_binary}}
+
+<br>
+<br>
+{{next_button}}
+{{ endblock }}

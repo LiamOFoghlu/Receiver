@@ -1,0 +1,14 @@
+{% block title %}
+    Welcome
+{% endblock %}
+
+{% block content %}
+
+    <h5> Please enter your Prolific ID here: </h5>
+	{% formfield player.ProlificID label="" %}
+
+	<p><strong> Important: </strong> You must enter your prolific ID to continue. We need this in order to pay you for your participation. </p>
+
+    {% next_button %}
+
+{% endblock %}

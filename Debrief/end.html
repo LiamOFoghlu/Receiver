@@ -1,0 +1,36 @@
+{% block styles %}
+
+<link href="{% static 'css_back/custom.css' %}" rel="stylesheet">
+
+{% endblock %}
+
+{{ block content }}
+
+<div class="card-header bg-transparent mainheader" ><h3 class="card-title font-weight-bold mt-3 mb-3"> Activity completed </h3></div>
+<br>
+<p> Thank you for your participation. Your total earnings will be calculated and paid within 48 hours.</p>
+<br>
+
+<h5>Completion Code</h5>
+
+<p>Please submit this completion code to Prolific to ensure that you are paid:</p>
+<br>
+<p><b>924424EE</b></p>
+<br>
+<br>
+<h5> Further queries </h5>
+
+<p>Please note that your participant ID key is {{ participant.code }}.</p>
+<p>It will be useful to have this ID key if you wish to
+    communicate with the researcher who manages this study. The participation ID key is <i>not</i> your study completion code, which
+    is given above.</p>
+
+<p> You may contact the researcher through the Prolific instant messaging service, or by emailing William Foley at <a href="mailto:william.foley@eui.eu">william.foley@eui.eu</a>. </p>
+
+<p> If you wish, you may address any specific concerns regarding data to the Data Controller William Foley at <a href="mailto:william.foley@eui.eu">william.foley@eui.eu</a>. Please cc the European University Institute’s Data Protection Officer at <a href="mailto:data_protection_officer@eui.eu">data_protection_officer@eui.eu</a>. The university’s Ethics Committee may be contacted through <a href="mailto:ethics@eui.eu">ethics@eui.eu</a>.</p>
+
+<p> You can also leave a comment below.</p>
+    {% formfield player.comment label="" %}
+
+<button>Submit comment</button>
+{% endblock %}

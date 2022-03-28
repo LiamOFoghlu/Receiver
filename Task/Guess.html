@@ -1,0 +1,32 @@
+{% block styles %}
+
+<link href="{% static 'css_back/custom.css' %}" rel="stylesheet">
+
+{% endblock %}
+
+{{ block content }}
+
+<div class="card-header bg-transparent mainheader" ><h3 class="card-title font-weight-bold mt-3 mb-3"> The Guess </h3></div>
+<br>
+
+<p>This is the final stage. Read carefully, you will have the chance to earn an extra {{Constants.guess_money}}. </p>
+<br>
+
+<h5>Did the proposer earn the money?</h5>
+<p>Remember there was a two in five chance the proposer had to do the maths task, depending on which ball they randomly drew from the box. If they drew a Task ball, they had to earn the {{Constants.money}} by passing a maths test. If they drew one of the No-task balls, they were simply gifted the {{Constants.money}}.</p>
+<br>
+<img align=center src="{% static 'Balls.png' %}" width="30%" />
+<br>
+<br>
+<br>
+<h5>Which ball did your proposer draw?</h5>
+<p>The proposers had to offer either 40% or 10% of the {{Constants.money}} to a receiver, keeping the rest for themselves. They didn't know in advance if the receiver could reject their offer.</p>
+<p>You were matched with Proposer {{proposer_id}} who offered you {{offer_percent}}, equal to {{offer_absolute}}. Proposer {{proposer_id}} either drew a Task ball, and did the maths task to earn the money, or drew a No-task ball and was gifted it. Guess which ball they drew. If you guess correctly, you will win {{Constants.guess_money}}. </p>
+<br>
+<p>Which ball do you think proposer {{proposer_id}} drew?</p>
+{{ formfield player.guess}}
+
+<br>
+{{ next_button }}
+
+{{ endblock }}

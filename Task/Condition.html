@@ -1,0 +1,18 @@
+{% block styles %}
+
+<link href="{% static 'css_back/custom.css' %}" rel="stylesheet">
+
+{% endblock %}
+
+{{ block content }}
+
+<div class="card-header bg-transparent mainheader" ><h3 class="card-title font-weight-bold mt-3 mb-3"> {{condition}} condition </h3></div>
+
+<br>
+{{include template}}
+<p>On the next page you will be shown your proposer's offer. The proposers were assigned random numbers between 10 and 100 and your proposer will be identified by this number</p>
+<br>
+
+{{ next_button }}
+
+{{ endblock }}

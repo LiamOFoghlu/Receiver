@@ -1,0 +1,44 @@
+{% block title %}
+    Consent form
+{% endblock %}
+
+{% block content %}
+
+<h5>Study description</h5>
+<p>A researcher at the European University Institute requests your participation in a study concerning the division of money.</p>	
+<p> You will be paid a flat fee of {{ session.participation_fee }} to participate. You will also receive a bonus payment of up to {{ Constants.max_payoff }}. Your exact earnings will depend on the money offered to you by another participant, and your estimation of whether that participant earned the money.</p>
+<p>This study has been approved by the European University Institute’s Ethics Review Committee.</p>
+
+<br>
+
+<h5>Data processing</h5>
+<b>1. Description of the processing operation.</b>
+<p>The initial data that is gathered will be pseudonymous. It will be linked to you through your Prolific ID, and hence will potentially allow for re-identification of you or your personal data. This pseudonymous data will be kept under password protection by the sole investigator. It will be stored on servers inside the European Union. As soon as payments are made, the Prolific IDs will be deleted from the dataset, making the data anonymous since it will not be possible to use it to identify you. Once the data is anonymised it is no longer considered personal data.</p>
+<b>2. What personal information will be collected, and for what purpose?</b>
+<p>Data will be collected on your performance and responses in this study. Data will also be taken from the basic demographic information which you have already provided to Prolific: age, sex, first language, current country of residence, nationality, country of birth, student status, employment status, educational attainment. The purpose of the data-gathering is for academic study.</p>
+<b>3. Who has access to your information, and how is it safeguarded?</b>
+<p>Only the sole researcher, William Foley, will have access to your personal data (i.e. the data including the Prolific IDs). It will be kept under password protection. Once the data is made anonymous by deleting the Prolific IDs, it will be made available for general use by researchers or other interested parties.</p>
+<b>4. How long will your data be kept?</b>
+<p>Your personal data will be kept for up to 14 days before the anonymisation procedure.</p>
+<b>5. How can you verify, modify or delete your information?</b>
+<p>If you wish to verify which personal data are stored by the responsible Data Controller, or access, correct or delete your personal data stored at the EUI, please contact the Data Controller at <a href="mailto:william.foley@eui.eu">william.foley@eui.eu</a>. You will receive a reply within 30 working days of receipt of the request. Remarks concerning this privacy statement can be addressed to data_protection_officer@eui.eu .</p>
+<b>6. Right of recourse</b>
+<p>If you consider that your rights under EUI President's Decision 10/2019 have been infringed as a result of the processing of your personal data by the EUI, you have the right to request a review according to Article 27 of the aforementioned decision. Such requests may be addressed to the Data Controller William Foley at <a href="mailto:william.foley@eui.eu">william.foley@eui.eu</a>, to the Ethics Committee at <a href="mailto:ethics@eui.eu">ethics@eui.eu</a>, or the EUI's data protection offer at <a href="mailto:data_protection_officer@eui.eu">data_protection_officer@eui.eu</a>.</p>
+
+<br>
+
+<h5>Informed consent</h5>
+<p>The following section contains a series of statements regarding your rights as a participant. If you agree with and understand the statements, click the "Next" button below to begin the activity. Clicking the "Next" button is considered a statement of consent: that you willingly participate in the research activity, and that you consent to the data being processed in the way indicated above.</p>
+<b>Statement of consent</b>
+<p>I agree to participate in this research project on the following conditions:</p>
+<p>1. I have received sufficient information about this research project and the future processing of my personal data.</p>
+<p>2. I have the right to withdraw from the activity before completion and ask that the data collected prior to the withdrawal be deleted.</p>
+<p>3. The researchers will not personally identify me by name or by other means.</p>
+<p>4. I am assured that this research project has been reviewed and approved by the EUI Ethics Committee. The email addresses of the EUI Data Protection Officer, EUI Ethics Committee, and the Data Controller will be placed at the end of the task, and any queries or complaints can be addressed to them.</p>
+<p>By clicking the "Next" button below, and continuing this activity, I consent to participate in the research activity.</p>
+
+<br>
+
+{% next_button %}
+
+{% endblock %}

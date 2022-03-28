@@ -1,0 +1,20 @@
+{% block styles %}
+
+<link href="{% static 'css_back/custom.css' %}" rel="stylesheet">
+
+{% endblock %}
+
+{{ block content }}
+
+<div class="card-header bg-transparent mainheader" ><h3 class="card-title font-weight-bold mt-3 mb-3"> The Offer </h3></div>
+<br>
+<p>You have been matched with Proposer {{proposer_id}}.</p>
+<p>Proposers can offer either 40% or 10% of {{Constants.money}} to the receiver. Proposer {{proposer_id}} has offered you {{offer_percent}}, which is equal to {{offer_absolute}}.</p>
+{{ include template}}
+
+<br>
+
+
+{{ next_button }}
+
+{{ endblock }}

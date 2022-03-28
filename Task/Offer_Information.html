@@ -1,0 +1,23 @@
+{% block styles %}
+
+<link href="{% static 'css_back/custom.css' %}" rel="stylesheet">
+
+{% endblock %}
+
+{{ block content }}
+
+<div class="card-header bg-transparent mainheader" ><h3 class="card-title font-weight-bold mt-3 mb-3"> The Choice </h3></div>
+<br>
+<p>Proposers who got their {{Constants.money}} had to offer part of it to a receiver. They offered either 40% or 10%, and kept the rest for themselves.</p>
+<p>In the next stage you will be matched with a proposer and receive their offer. What you do with their offer depends on whether you are in the Choice condition or the No-choice condition. You have a fifty-fifty chance of being in either.</p>
+<p>If you are placed in the Choice condition, you can reject the proposer's offer. If you reject it, both you and the proposer get zero. If you are placed in the No-choice condition, you must accept the proposer's offer. The image below illustrates the situation.</p>
+<br>
+<img align=centre src="{% static 'Offer_Outline.png' %}" width="60%" />
+<br>
+<br>
+<p>The proposers did not know whether the receiver they were matched with would be in the Choice condition or the No-choice condition, but they were told that there was an equal chance of either.</p>
+<p>Click Next to find out if you are in the Choice condition or No-Choice condition.</p>
+<br>
+{{ next_button }}
+
+{{ endblock }}
